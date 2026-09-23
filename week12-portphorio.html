@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>week12|ポートフォリオ</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Splide CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="flex justify-between items-center shadow-sm bg-red-300">
+
+        <h3 class="p-2 font-bold text-xl text-blue-500">
+            まっちゃんポートフォリオ
+        </h3>
+
+        <p class="py-2 px-4 font-bold text-sm cursor-pointer
+                  hover:underline hover:text-indigo-900">
+            POSSEプログラミングコミュニティ所属
+        </p>
+
+    </header>
+
+
+    <!-- 自己紹介 -->
+    <section
+        class="font-bold mt-8 px-4 py-2 rounded-lg bg-yellow-200
+               w-fit mx-auto
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-lg
+               cursor-pointer relative group overflow-hidden
+               hover:scale-110">
+
+        <p class="text-indigo-900 p-4 text-center">
+
+            はじめまして、まっちゃんです🙌<br>
+
+            🍵 抹茶大好き！
+            ⚾️ 野球大好き！<br>
+
+            🏃 最近はランニングにハマってます！
+            🍳 実は料理も好きです！<br>
+
+            抹茶を見つけたらつい買っちゃいます（笑）<br>
+
+            野球を見たり、走ったり、料理したり……<br>
+            気づいたら何かしてます😂<br>
+
+            食べることも作ることも好きなので、<br>
+
+            おすすめの抹茶スイーツや料理があったら
+            ぜひ教えてください！<br>
+
+            よろしくお願いします！！✨
+
+        </p>
+
+    </section>
+
+
+    <!-- 作品スライダー -->
+    <section class="mt-12 mx-4">
+
+        <h2 class="text-2xl font-bold mb-4 text-center text-indigo-900">
+            作品
+        </h2>
+
+        <section
+            class="splide max-w-2xl mx-auto"
+            aria-label="作品スライダー">
+
+            <div class="splide__track">
+
+                <ul class="splide__list">
+
+                    <!-- 作品1 -->
+                    <li class="splide__slide">
+
+                        <img
+                            src="./images/sai2.jpg"
+                            alt="作品1"
+                            class="w-full rounded-lg object-cover">
+
+                    </li>
+
+                    <!-- 作品2 -->
+                    <li class="splide__slide">
+
+                        <img
+                            src="./images/sai.jpg"
+                            alt="作品2"
+                            class="w-full rounded-lg object-cover">
+
+                    </li>
+                    <li class="splide__slide">
+
+                        <img
+                            src="./images/sai1.jpg"
+                            alt="作品3"
+                            class="w-full rounded-lg object-cover">
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- スキルタイトル -->
+    <div class="bg-yellow-300 rounded-lg w-fit mx-auto mt-12">
+
+        <h3 class="font-bold p-2 px-6">
+            スキルリスト
+        </h3>
+
+    </div>
+
+
+    <!-- スキルリスト -->
+    <div class="text-center mt-8">
+
+        <ul
+            id="list"
+            class="rounded-lg bg-yellow-300
+                   m-8 w-fit
+                   flex flex-col justify-center
+                   p-12 mx-auto">
+
+            <li class="hidden-item hidden text-xl pt-2">
+                JS
+            </li>
+
+            <li class="hidden-item hidden text-xl pt-2">
+                CSS
+            </li>
+
+            <li class="hidden-item hidden text-xl pt-2">
+                Tailwind CSS
+            </li>
+
+            <li class="hidden-item hidden text-xl pt-2">
+                HTML
+            </li>
+
+            <li class="hidden-item hidden text-xl pt-2">
+                git操作
+            </li>
+
+        </ul>
+
+
+        <!-- もっと見るボタン -->
+        <button
+            id="more-button"
+            class="transition-all duration-200
+                   bg-indigo-500
+                   hover:bg-indigo-600
+                   hover:scale-105
+                   text-white
+                   px-6 py-2
+                   rounded-full mb-4">
+
+            もっと見る
+
+        </button>
+
+    </div>
+
+
+    <!-- フッター -->
+    <footer
+        class="bg-gray-800 text-gray-400
+               text-center py-6 mt-16">
+
+        <p>2026 まっちゃん</p>
+
+        <h1>
+            POSSE
+        </h1>
+
+    </footer>
+
+
+    <!-- Splide JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+
+    <script>
+
+        // =========================
+        // もっと見るボタン
+        // =========================
+
+        const button = document.getElementById("more-button");
+
+        const items = document.querySelectorAll(".hidden-item");
+
+
+        button.addEventListener("click", () => {
+
+            items.forEach(item => {
+
+                item.classList.toggle("hidden");
+
+            });
+
+        });
+
+
+        // =========================
+        // Splide スライダー
+        // =========================
+
+        const splide = new Splide(".splide", {
+
+            type: "loop",
+
+            autoplay: true,
+
+            interval: 3000,
+
+            pauseOnHover: true,
+
+        });
+
+
+        splide.mount();
+
+    </script>
+
+</body>
+
+</html>
