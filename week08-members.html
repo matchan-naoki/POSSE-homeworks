@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSSE7.0期生メンバー紹介</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-500">
+    <h1 class="text-3xl font-bold text-white p-4">POSSEチームメンバー</h1>
+    <div id="memberList" class="grid gap-4"></div>
+<script>
+    const members = [
+    { name: "松浦直生", age: "19", favorite: "baseball", Comment: "プログラミングも好きですが、POSSEが大好き🎶" },
+    { name: "北浦心晴", age: "18", favorite: "mashimo", Comment: "パルパルって呼んでね🎶" },
+    { name: "西村茶々", age: "18", favorite: "I don't Know", Comment: "話したことがない🎶" },
+    { name: "真下知大", age: "18", favorite: "jubilo", Comment: "天然キャラやらせてもらってます🎶" },
+    { name: "後藤亮太", age: "18", favorite: "soccer", Comment: "海外で挑戦します🎶" },
+    { name: "川名遼太", age: "19", favorite: "training", Comment: "世の中は筋肉がすごい🎶" },
+    { name: "佐々木蒼空", age: "21", favorite: "movie", Comment: "最近筋トレ頑張ってます🎶" },
+    { name: "内田広翔", age: "19", favorite: "POSSE", Comment: "裏サバリとして尽力します🎶" },
+    { name: "小野咲大", age: "19", favorite: "nosribe", Comment: "あざす！🎶" },
+    { name: "十川愛", age: "18", favorite: "rikkyo", Comment: "立教愛がすごい🎶" },
+    { name: "杉山明咲", age: "18", favorite: "Mrs.", Comment: "ミセスが好きだ！🎶" },
+    { name: "稲田英琳", age: "20", favorite: "everything", Commnt: "合法です🎶" },
+    { name: "大木開登", age: "18", favorite: "foreign", Comment: "海外経験豊富です🎶" },
+    { name: "北島銀河", age: "18", favorite: "beer", Comment: "酒うまいな🎶" },
+    { name: "相馬琢人", age: "18", favorite: "lest", Comment: "これから巻き返す🎶" },
+    { name: "長谷川実桜", age: "18", favorite: "prettythings", Comment: "プログラミングやると楽しい🎶" },  
+    { name: "永井心", age: "18", favorite: "clothes", Comment: "妥協はしない🎶" },
+    { name: "森田健太郎", age: "18", favorite: "hut", Comment: "寮生活の民🎶" },
+    { name: "江口佳奏", age: "18", favorite: "habazu", Comment: "ハバズ大好き🎶" },
+    { name: "堀井咲来", age: "18", favorite: "asai", Comment: "キャンパス同じだ🎶" },
+    { name: "長岡璃央", age: "18", favorite: "funny", Comment: "おもろいキャラ🎶" },
+    { name: "藤島志帆", age: "19", favorite: "carrer", Comment: "ふわふわ好き🎶" },
+    { name: "福井杜和", age: "18", favorite: "programing", Comment: "徹夜でプログラミングがいっちゃん気持ちいい🎶" },
+    { name: "飯野小紅", age: "18", favorite: "hearband", Comment: "お世話になりました🎶" },
+    { name: "長友紗希", age: "19", favorite: "photo", Comment: "写真撮ります🎶" },
+    { name: "山下久瑠美", age: "18", favorite: "pencil", Comment: "文房具が好きです🎶" },
+    { name: "国井美咲", age: "18", favorite: "pokemon", Comment: "ポケモン好きです🎶" },
+    { name: "木下莉子", age: "18", favorite: "happy", Comment: "楽しいことが好き🎶" },
+    { name: "片岡奈央", age: "18", favorite: "green", Comment: "話し上手です🎶" },
+    { name: "瀧本美樹", age: "18", favorite: "cat", Comment: "よろしく🎶" },
+    { name: "西村帆加", age: "18", favorite: "dog", Comment: "犬🎶" },
+    { name: "黒住友美", age: "18", favorite: "fire", Comment: "真面目です🎶" },
+    ];
+
+    const memberList = document.getElementById("memberList");
+    members.forEach((member) => {
+    const card = document.createElement("div");
+    card.className = "bg-white rounded-lg shadow p-4 hover:bg-orange-300 transition-transform";
+    card.innerHTML = `
+    <h2 class="text-lg font-bold">名前: ${member.name}</h2>
+    <p class="text-blue-600 text-sm">年齢: ${member.age}</p>
+    <p class="text-gray-600 mt-2">好きなもの: ${member.favorite}</p>
+    <p class="text-gray-600 mt-2">${member.Comment}</p>
+    `;
+    memberList.appendChild(card); 
+    });
+</script>
+</body>
+</html>
